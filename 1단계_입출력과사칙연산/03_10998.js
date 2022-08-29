@@ -12,5 +12,5 @@ input = input.split(" ").map(Number);
 solution(input[0], input[1]);
 
 function solution(a, b) {
-  console.log();
+  console.log(a * b);
 }

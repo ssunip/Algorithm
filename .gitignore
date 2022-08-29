@@ -1,4 +1,5 @@
 # 백준 알고리즘 기본 파일들. 문제 풀 때마다 매번 내용이 바뀌기 때문에 ignore 해준다.
 
-/algorithm.js
-/example.txt
+
+*.txt
+algo.js
