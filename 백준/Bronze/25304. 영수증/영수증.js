@@ -4,15 +4,18 @@ let input = require("fs")
   .trim()
   .split("\n");
 
-//console.log(input);
+solution(input);
 
-let total = +input[0];
-let cnt = +input[1];
-let sum = 0;
+function solution(arr) {
+  let total = parseInt(arr.shift());
+  let number = parseInt(arr.shift());
 
-for (let i = 2; i <= cnt + 1; ++i) {
-  let newArr = input[i].split(" ").map((item) => Number(item));
-  sum += newArr[0] * newArr[1];
+  let sum = 0;
+  for (let i = 0; i < number; i++) {
+    // 1. 반복문으로 각 요소마다 split으로 나눠주고 숫자로 바꾸기
+    let newArr = arr[i].split(" ").map(Number);
+    // 2. 각 배열의 가격과 갯수를 곱한 후, 다 더해주기
+    sum = sum + newArr[0] * newArr[1];
+  }
+  total === sum ? console.log("Yes") : console.log("No");
 }
-
-console.log(total === sum ? "Yes" : "No");
