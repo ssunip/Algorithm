@@ -5,7 +5,7 @@ function solution(n) {
     arr[1] = false
     // 0과 1은 소수가 아님
     
-    for(let i = 2; i <= parseInt(Math.sqrt(n)); i++) {
+    for(let i = 2; i*i <= n; i++) {
         if(arr[i]) {
             for(let j = i*i; j <= n; j+=i) {
                 arr[j] = false
