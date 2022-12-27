@@ -3,8 +3,13 @@ function solution(dartResult) {
     dartResult = dartResult.split("")
     
     for(let i = 0; i < dartResult.length; i++) {
-        if(!isNaN(dartResult[i])) {
-        dartResult[i] = (dartResult[i-1] === "1" ? 10 : dartResult[i]);
+        // if(!isNaN(dartResult[i])) {
+        // dartResult[i] = (dartResult[i-1] === "1" ? 10 : dartResult[i]);
+        // }
+        
+        if(dartResult[i] + dartResult[i+1] === '10') {
+                dartResult[i] = '10';
+                dartResult.splice(i+1, 1)
         }
         
         if(dartResult[i] === "S"){
